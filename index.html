@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Navigation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Menu Overlay -->
+  <div class="overlay" id="overlay">
+    <!-- Menu Items -->
+    <nav role="navigation">
+      <ul>
+        <li id="nav-1"><a href="#" data-content="Welcome To Jacinto Design" onclick="toggleNav()">Home</a></li>
+        <li id="nav-2"><a href="#about" data-content="Learn More About Me" onclick="toggleNav()">About</a></li>
+        <li id="nav-3"><a href="#skills" data-content="These Are My Strengths" onclick="toggleNav()">Skills</a></li>
+        <li id="nav-4"><a href="#projects" data-content="These Are My Results" onclick="toggleNav()">Projects</a></li>
+        <li id="nav-5"><a href="#contact" data-content="Available Anytime" onclick="toggleNav()">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Menu Toggle -->
+  <div class="open-overlay" onclick="toggleNav()">
+    <span id="toggle-1"></span>
+    <span id="toggle-2"></span>
+    <span id="toggle-3"></span>
+  </div>
+  <!-- Sections -->
+  <section id="home"><a href="https://jacinto.design" target="_blank">Jacinto Design</a></section>
+  <section id="about"><h1>Learn More About Me</h1></section>
+  <section id="skills"><h1>These Are My Strengths</h1></section>
+  <section id="projects"><h1>These Are My Results</h1></section>
+  <section id="contact"><h1>Available Anytime</h1></section>
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
