@@ -124,7 +124,7 @@ nav li a:after {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -50px;
+  bottom: -40px;
   margin-right: auto;
   margin-left: auto;
   z-index: 10;
