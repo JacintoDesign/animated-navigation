@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
+* { box-sizing: border-box }
+
 :root {
   --primaryColor: #FFF;
   --navColor1: #21292C;
@@ -8,8 +10,6 @@
   --navColor4: #236267;
   --navColor5: #2C8437;
 }
-
-* { box-sizing: border-box }
 
 body {
   margin: 0;
