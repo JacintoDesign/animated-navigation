@@ -2,7 +2,6 @@
 
 :root {
   --primaryColor: #FFF;
-  --secondaryColor: #AA3E39;
   --navColor1: #21292C;
   --navColor2: #AA3E39;
   --navColor3: #AA6E39;
@@ -27,7 +26,7 @@ section {
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #fff;
+  color: var(--primaryColor);
 }
 
 #home {
@@ -185,118 +184,40 @@ nav li:nth-of-type(5) { background-color: var(--navColor5) }
   }
 }
 
-/* --- Toggle -----------------------------------*/
+/* --- Menu Bars -----------------------------------*/
 
-.open-overlay {
+#menu-bars {
   position: fixed;
   top: 1rem;
   right: 2rem;
   z-index: 10;
-  width: 2rem;
-  display: block;
+  display: inline;
   cursor: pointer;
 }
 
-.open-overlay span {
-  display: block;
-  height: 1px;
-  background-color: var(--primaryColor);
-  cursor: pointer;
-  margin-top: 8px;
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+  margin: 8px 0;
+  transition: 0.4s;
 }
 
-.animate-toggle-1 { animation: animate-toggle-1 .6s linear 1 both }
-
-@keyframes animate-toggle-1 {
-  0% {
-    background-color: var(--primaryColor);
-  }
-  50% {
-    transform: translateX(9px)
-  }
-  80% {
-    transform: translateX(5px);
-  }
-  100% {
-    transform: translateX(0);
-    background-color: var(--secondaryColor);
-  }
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-7px, 8px) ;
+  transform: rotate(-45deg) translate(-7px, 8px) ;
 }
 
-.animate-toggle-2 { animation: animate-toggle-2 .6s linear 1 both }
-
-@keyframes animate-toggle-2 {
-  0% {
-    background-color: var(--primaryColor);
-  }
-  100% {
-    background-color: var(--secondaryColor);
-  }
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
 }
 
-.animate-toggle-3 { animation: animate-toggle-3 .6s linear 1 both }
-
-@keyframes animate-toggle-3 {
-  0% {
-    background-color: var(--primaryColor);
-  }
-  50% {
-    transform: translateX(-9px)
-  }
-  80% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0);
-    background-color: var(--secondaryColor);
-  }
-}
-
-.animate-out-toggle-1 { animation: animate-out-toggle-1 .6s linear 1 both }
-
-@keyframes animate-out-toggle-1 {
-  0% {
-    background-color: var(--secondaryColor);
-  }
-  50% {
-    transform: translateX(9px)
-  }
-  80% {
-    transform: translateX(5px);
-  }
-  100% {
-    transform: translateX(0);
-    background-color: var(--primaryColor);
-  }
-}
-
-.animate-out-toggle-3 { animation: animate-out-toggle-3 .6s linear 1 both }
-
-@keyframes animate-out-toggle-2 {
-  0% {
-    background-color: var(--secondaryColor);
-  }
-  100% {
-    background-color: var(--primaryColor);
-  }
-}
-
-.animate-out-toggle-2 { animation: animate-out-toggle-2 .6s linear 1 both }
-
-@keyframes animate-out-toggle-3 {
-  0% {
-    background-color: var(--secondaryColor);
-  }
-  50% {
-    transform: translateX(-9px)
-  }
-  80% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0);
-    background-color: var(--primaryColor);
-  }
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px) ;
+  transform: rotate(45deg) translate(-6px, -8px) ;
 }
 
 /* Media Query: Large Smartphone (Vertical) */

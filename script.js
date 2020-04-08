@@ -4,24 +4,18 @@ const overlay = document.getElementById('overlay'),
       nav3 = document.getElementById('nav-3'),
       nav4 = document.getElementById('nav-4'),
       nav5 = document.getElementById('nav-5'),
-      toggle1 = document.getElementById('toggle-1'),
-      toggle2 = document.getElementById('toggle-2'),
-      toggle3 = document.getElementById('toggle-3');
+      menuBars = document.getElementById('menu-bars');
 
 function toggleNav() {
+  // Toggle: Menu Bars Open/Closed
+  menuBars.classList.toggle('change');
+  // Toggle: Menu Active
   overlay.classList.toggle('overlay-active');
   if (overlay.classList.contains('overlay-active')) {
-    // Toggle
-    toggle1.classList.remove('animate-out-toggle-1');
-    toggle1.classList.add('animate-toggle-1');
-    toggle2.classList.remove('animate-out-toggle-2');
-    toggle2.classList.add('animate-toggle-2');
-    toggle3.classList.remove('animate-out-toggle-3');
-    toggle3.classList.add('animate-toggle-3');
-    // Overlay
+    // Animate In - Overlay
     overlay.classList.remove('overlay-slide-left');
     overlay.classList.add('overlay-slide-right');
-    // Nav Items
+    // Animate In - Nav Items
     nav1.classList.remove('slide-in-nav-item-reverse');
     nav1.classList.add('slide-in-nav-item');
     nav2.classList.remove('slide-in-nav-item-delay-1-reverse');
@@ -33,17 +27,10 @@ function toggleNav() {
     nav5.classList.remove('slide-in-nav-item-delay-4-reverse');
     nav5.classList.add('slide-in-nav-item-delay-4');
   } else {
-    // Toggle
-    toggle1.classList.remove('animate-toggle-1');
-    toggle1.classList.add('animate-out-toggle-1');
-    toggle2.classList.remove('animate-toggle-2');
-    toggle2.classList.add('animate-out-toggle-2');
-    toggle3.classList.remove('animate-toggle-3');
-    toggle3.classList.add('animate-out-toggle-3');
-    // Overlay
+    // Animate Out - Overlay
     overlay.classList.remove('overlay-slide-right');
     overlay.classList.add('overlay-slide-left');
-    // Nav Items
+    // Animate Out - Nav Items
     nav1.classList.remove('slide-in-nav-item');
     nav1.classList.add('slide-in-nav-item-reverse');
     nav2.classList.remove('slide-in-nav-item-delay-1');
