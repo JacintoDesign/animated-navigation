@@ -30,7 +30,7 @@ section {
 }
 
 #home {
-  background-image: url(https://images.unsplash.com/photo-1581453904507-626ddb717f14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
+  background-image: url('https://images.unsplash.com/photo-1581453904507-626ddb717f14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80');
   background-size: cover;
   background-position: center center;
 }
@@ -106,34 +106,22 @@ nav li a {
 
 nav li a:before {
   content: '';
-  width: 8rem;
-  height: 5px;
+  width: 40rem;
+  height: 3px;
   background-color: #fff;
   position: absolute;
   top: 50%;
   left: 0;
-  z-index: 10;
-  transform: translateX(-100%);
   opacity: 0;
   transition: all .2s linear;
 }
 
 nav li a:after {
-  content: attr(data-content);
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -40px;
-  margin-right: auto;
-  margin-left: auto;
-  z-index: 10;
-  display: block;
-  font-size: 0.8rem;
-  text-transform: none;
-  font-style: italic;
-  letter-spacing: 0;
-  opacity: 0;
   transition: all .2s linear;
+}
+
+nav li a:hover {
+  transform: scale(1.2);
 }
 
 nav li a:hover:before {
@@ -186,7 +174,7 @@ nav li:nth-of-type(5) { background-color: var(--navColor5) }
 
 /* --- Menu Bars -----------------------------------*/
 
-#menu-bars {
+.menu-bars {
   position: fixed;
   top: 1rem;
   right: 2rem;
@@ -223,5 +211,6 @@ nav li:nth-of-type(5) { background-color: var(--navColor5) }
 /* Media Query: Large Smartphone (Vertical) */
 @media (max-width: 600px) {
   #home a { top: 1rem; left: 1rem; }
-  .open-overlay { top: .5rem; right: 1rem; }
+  #menu-bars { top: .5rem; right: 1rem; }
+  nav li a:before { width: 8rem; height: 2px; }
 }
