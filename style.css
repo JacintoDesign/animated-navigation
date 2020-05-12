@@ -1,56 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
-
-* { box-sizing: border-box }
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 
 :root {
-  --primaryColor: #FFF;
-  --navColor1: #21292C;
-  --navColor2: #AA3E39;
-  --navColor3: #AA6E39;
+  --primaryColor: #fff;
+  --navColor1: #21292c;
+  --navColor2: #aa3e39;
+  --navColor3: #aa6e39;
   --navColor4: #236267;
-  --navColor5: #2C8437;
+  --navColor5: #2c8437;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: Nunito, sans-serif;
-  background-color: #000;
+  background: #000;
 }
-
-section {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--primaryColor);
-}
-
-#home {
-  background-image: url('https://images.unsplash.com/photo-1581453904507-626ddb717f14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80');
-  background-size: cover;
-  background-position: center center;
-}
-
-#home a {
-  position: absolute;
-  z-index: 2;
-  top: 1.5rem;
-  left: 1.5rem;
-  text-decoration: none;
-  font-size: .8rem;
-  padding-bottom: 5px;
-  color: var(--primaryColor); 
-  border-bottom: 1px solid var(--primaryColor);
-}
-
-#about { background-color: var(--navColor2); }
-#skills { background-color: var(--navColor3); }
-#projects { background-color: var(--navColor4); }
-#contact { background-color: var(--navColor5); }
 
 /* --- Navigation Menu ------------------------------ */
 
@@ -61,21 +28,22 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
   transform: translateX(-100%);
 }
 
 .overlay-slide-right {
-  transition: all .4s ease-in-out;
-  transform: translateX(0)
+  transition: all 0.4s ease-in-out;
+  transform: translateX(0);
 }
 
 .overlay-slide-left {
-  transition: all .8s ease-in-out;
-  transform: translateX(-100%)
+  transition: all 0.8s ease-in-out;
+  transform: translateX(-100%);
 }
 
-nav, nav ul {
+nav,
+nav ul {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -104,8 +72,8 @@ nav li a {
   text-align: center;
 }
 
-nav li a:before {
-  content: '';
+nav li a::before {
+  content: "";
   width: 40rem;
   height: 3px;
   background-color: #fff;
@@ -113,66 +81,110 @@ nav li a:before {
   top: 50%;
   left: 0;
   opacity: 0;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
-nav li a:after {
-  transition: all .2s linear;
+nav li a::after {
+  transition: all 0.2s linear;
 }
 
 nav li a:hover {
   transform: scale(1.2);
 }
 
-nav li a:hover:before {
+nav li a:hover::before {
   transform: translateX(0);
   opacity: 1;
 }
 
-nav li a:hover:after {
+nav li a:hover::after {
   transform: translateY(15px);
   opacity: 1;
 }
 
-nav li:nth-of-type(1) { background-color: var(--navColor1) }
-nav li:nth-of-type(2) { background-color: var(--navColor2) }
-nav li:nth-of-type(3) { background-color: var(--navColor3) }
-nav li:nth-of-type(4) { background-color: var(--navColor4) }
-nav li:nth-of-type(5) { background-color: var(--navColor5) }
+nav li:nth-of-type(1) {
+  background-color: var(--navColor1);
+}
+
+nav li:nth-of-type(2) {
+  background-color: var(--navColor2);
+}
+
+nav li:nth-of-type(3) {
+  background-color: var(--navColor3);
+}
+
+nav li:nth-of-type(4) {
+  background-color: var(--navColor4);
+}
+
+nav li:nth-of-type(5) {
+  background-color: var(--navColor5);
+}
 
 /* Slide in nav items with delay for each */
-.slide-in-nav-item { animation: slide-in-nav-item 0.4s linear 1 .2s both; }
-.slide-in-nav-item-delay-1 { animation: slide-in-nav-item 0.4s linear 1 .4s both; }
-.slide-in-nav-item-delay-2 { animation: slide-in-nav-item 0.4s linear 1 .6s both; }
-.slide-in-nav-item-delay-3 { animation: slide-in-nav-item 0.4s linear 1 .8s both; }
-.slide-in-nav-item-delay-4 { animation: slide-in-nav-item 0.4s linear 1 1s both; }
+.slide-in-nav-item {
+  animation: slide-in-nav-item 0.4s linear 1 0.2s both;
+}
+
+.slide-in-nav-item-delay-1 {
+  animation: slide-in-nav-item 0.4s linear 1 0.4s both;
+}
+
+.slide-in-nav-item-delay-2 {
+  animation: slide-in-nav-item 0.4s linear 1 0.6s both;
+}
+
+.slide-in-nav-item-delay-3 {
+  animation: slide-in-nav-item 0.4s linear 1 0.8s both;
+}
+
+.slide-in-nav-item-delay-4 {
+  animation: slide-in-nav-item 0.4s linear 1 1s both;
+}
 
 @keyframes slide-in-nav-item {
   from {
-    transform: translateX(-100%)
+    transform: translateX(-100%);
   }
+
   to {
-    transform: translateX(0)
+    transform: translateX(0);
   }
 }
 
 /* Slide out nav items with delay for each */
-.slide-in-nav-item-reverse { animation: slide-in-nav-item-reverse .3s linear 1 .5s both; }
-.slide-in-nav-item-delay-1-reverse { animation: slide-in-nav-item-reverse .3s linear 1 .4s both; }
-.slide-in-nav-item-delay-2-reverse { animation: slide-in-nav-item-reverse .3s linear 1 .3s both; }
-.slide-in-nav-item-delay-3-reverse { animation: slide-in-nav-item-reverse .3s linear 1 .2s both; }
-.slide-in-nav-item-delay-4-reverse { animation: slide-in-nav-item-reverse .3s linear 1 both; }
+.slide-in-nav-item-reverse {
+  animation: slide-in-nav-item-reverse 0.3s linear 1 0.5s both;
+}
+
+.slide-in-nav-item-delay-1-reverse {
+  animation: slide-in-nav-item-reverse 0.3s linear 1 0.4s both;
+}
+
+.slide-in-nav-item-delay-2-reverse {
+  animation: slide-in-nav-item-reverse 0.3s linear 1 0.3s both;
+}
+
+.slide-in-nav-item-delay-3-reverse {
+  animation: slide-in-nav-item-reverse 0.3s linear 1 0.2s both;
+}
+
+.slide-in-nav-item-delay-4-reverse {
+  animation: slide-in-nav-item-reverse 0.3s linear 1 both;
+}
 
 @keyframes slide-in-nav-item-reverse {
   from {
-    transform: translateX(0)
+    transform: translateX(0);
   }
+
   to {
-    transform: translateX(-100%)
+    transform: translateX(-100%);
   }
 }
 
-/* --- Menu Bars -----------------------------------*/
+/* --- Menu Bars ----------------------------------- */
 
 .menu-bars {
   position: fixed;
@@ -183,7 +195,9 @@ nav li:nth-of-type(5) { background-color: var(--navColor5) }
   cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
   width: 35px;
   height: 2px;
   background-color: #fff;
@@ -193,8 +207,8 @@ nav li:nth-of-type(5) { background-color: var(--navColor5) }
 
 /* Rotate first bar */
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-7px, 8px) ;
-  transform: rotate(-45deg) translate(-7px, 8px) ;
+  -webkit-transform: rotate(-45deg) translate(-7px, 8px);
+  transform: rotate(-45deg) translate(-7px, 8px);
 }
 
 /* Fade out the second bar */
@@ -204,13 +218,72 @@ nav li:nth-of-type(5) { background-color: var(--navColor5) }
 
 /* Rotate last bar */
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-6px, -8px) ;
-  transform: rotate(45deg) translate(-6px, -8px) ;
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* --- Sections ------------------------------------ */
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primaryColor);
+}
+
+section#home {
+  background-image: url("https://images.unsplash.com/photo-1581453904507-626ddb717f14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80");
+  background-size: cover;
+  background-position: center center;
+}
+
+section#home a {
+  position: absolute;
+  z-index: 2;
+  top: 1.5rem;
+  left: 1.5rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding-bottom: 5px;
+  color: var(--primaryColor);
+  border-bottom: 1px solid var(--primaryColor);
+}
+
+section#about {
+  background-color: var(--navColor2);
+}
+
+section#skills {
+  background-color: var(--navColor3);
+}
+
+section#projects {
+  background-color: var(--navColor4);
+}
+
+section#contact {
+  background-color: var(--navColor5);
 }
 
 /* Media Query: Large Smartphone (Vertical) */
 @media (max-width: 600px) {
-  #home a { top: 1rem; left: 1rem; }
-  #menu-bars { top: .5rem; right: 1rem; }
-  nav li a:before { width: 8rem; height: 2px; }
+  section#home a {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .menu-bars {
+    top: 0.5rem;
+    right: 1rem;
+  }
+
+  nav li a::before {
+    width: 8rem;
+    height: 2px;
+  }
 }
