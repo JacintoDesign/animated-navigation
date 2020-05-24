@@ -5,14 +5,13 @@ const nav2 = document.getElementById('nav-2');
 const nav3 = document.getElementById('nav-3');
 const nav4 = document.getElementById('nav-4');
 const nav5 = document.getElementById('nav-5');
+const navItems = [nav1, nav2, nav3, nav4, nav5];
 
 // Control Navigation Animation
 function navAnimation(direction1, direction2) {
-  nav1.classList.replace(`slide-${direction1}-1`, `slide-${direction2}-1`);
-  nav2.classList.replace(`slide-${direction1}-2`, `slide-${direction2}-2`);
-  nav3.classList.replace(`slide-${direction1}-3`, `slide-${direction2}-3`);
-  nav4.classList.replace(`slide-${direction1}-4`, `slide-${direction2}-4`);
-  nav5.classList.replace(`slide-${direction1}-5`, `slide-${direction2}-5`);
+  navItems.forEach((nav, i) => {
+    nav.classList.replace(`slide-${direction1}-${i + 1}`, `slide-${direction2}-${i + 1}`);
+  });
 }
 
 function toggleNav() {
