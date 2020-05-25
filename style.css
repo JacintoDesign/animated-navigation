@@ -21,15 +21,16 @@ body {
 
 /* --- Navigation Menu ------------------------------ */
 
+/* Overlay */
 .overlay {
   position: fixed;
   z-index: 9;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
-  transform: translateX(-100%);
+  transform: translateX(-100vw);
 }
 
 .overlay-slide-right {
@@ -39,12 +40,13 @@ body {
 
 .overlay-slide-left {
   transition: all 0.8s ease-in-out;
-  transform: translateX(-100%);
+  transform: translateX(-100vw);
 }
 
+/* Nav Menu Items */
 nav,
 nav ul {
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -72,33 +74,23 @@ nav li a {
   text-align: center;
 }
 
+nav li a:hover {
+  transform: scale(1.2);
+}
+
 nav li a::before {
   content: "";
   width: 40rem;
   height: 3px;
   background-color: #fff;
   position: absolute;
-  top: 50%;
+  top: 47.5%;
   left: 0;
   opacity: 0;
   transition: all 0.2s linear;
 }
 
-nav li a::after {
-  transition: all 0.2s linear;
-}
-
-nav li a:hover {
-  transform: scale(1.2);
-}
-
 nav li a:hover::before {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-nav li a:hover::after {
-  transform: translateY(15px);
   opacity: 1;
 }
 
@@ -122,7 +114,7 @@ nav li:nth-of-type(5) {
   background-color: var(--navColor5);
 }
 
-/* Slide in nav items with delay for each */
+/* Slide in animation with delay for each */
 .slide-in-1 {
   animation: slide-in 0.4s linear 0.2s both;
 }
@@ -153,7 +145,7 @@ nav li:nth-of-type(5) {
   }
 }
 
-/* Slide out nav items with delay for each */
+/* Slide out animation with delay for each */
 .slide-out-1 {
   animation: slide-out 0.3s linear 0.5s both;
 }
