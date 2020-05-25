@@ -199,7 +199,6 @@ nav li:nth-of-type(5) {
 
 /* Rotate first bar */
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-7px, 8px);
   transform: rotate(-45deg) translate(-7px, 8px);
 }
 
@@ -210,7 +209,6 @@ nav li:nth-of-type(5) {
 
 /* Rotate last bar */
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-6px, -8px);
   transform: rotate(45deg) translate(-6px, -8px);
 }
 
