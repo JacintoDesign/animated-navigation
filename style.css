@@ -15,8 +15,8 @@ html {
 
 body {
   margin: 0;
-  font-family: Nunito, sans-serif;
   background: #000;
+  font-family: Nunito, sans-serif;
 }
 
 /* --- Navigation Menu ------------------------------ */
@@ -80,14 +80,14 @@ nav li a:hover {
 
 nav li a::before {
   content: "";
-  width: 40rem;
+  width: 25vw;
   height: 3px;
   background-color: #fff;
   position: absolute;
   top: 47.5%;
   left: 0;
   opacity: 0;
-  transition: all 0.2s linear;
+  transition: opacity 0.2s;
 }
 
 nav li a:hover::before {
@@ -176,7 +176,7 @@ nav li:nth-of-type(5) {
   }
 }
 
-/* --- Menu Bars ----------------------------------- */
+/* --- Menu Bars ------------------------------------ */
 
 .menu-bars {
   position: fixed;
@@ -270,10 +270,5 @@ section#contact {
   .menu-bars {
     top: 0.5rem;
     right: 1rem;
-  }
-
-  nav li a::before {
-    width: 8rem;
-    height: 2px;
   }
 }

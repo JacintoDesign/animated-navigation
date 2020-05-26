@@ -34,8 +34,6 @@ function toggleNav() {
 
 // Event Listeners
 menuBars.addEventListener('click', toggleNav);
-nav1.addEventListener('click', toggleNav);
-nav2.addEventListener('click', toggleNav);
-nav3.addEventListener('click', toggleNav);
-nav4.addEventListener('click', toggleNav);
-nav5.addEventListener('click', toggleNav);
+navItems.forEach((nav) => {
+  nav.addEventListener('click', toggleNav);
+});
