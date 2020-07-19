@@ -87,7 +87,6 @@ nav li a::before {
   top: 47.5%;
   left: 0;
   opacity: 0;
-  transition: opacity 0.2s;
 }
 
 nav li a:hover::before {
